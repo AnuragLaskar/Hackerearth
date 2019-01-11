@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define SIZE 1000000
+int main()
+{
+    long long int arr[SIZE],n,t,l,r,sum=0,mean,i;
+    scanf("%lld %lld\n",&n,&t);
+    for(i=1;i<=n;i++)
+    {
+        scanf("%lld ",&arr[i]);
+        arr[i]=arr[i]+arr[i-1];
+    }    
+    arr[0]=0;
+    while(t)
+    {
+        scanf("\n%lld %lld",&l,&r);
+        sum=arr[r]-arr[l-1];
+        mean=sum/(r-l+1);
+        printf("\n%lld",mean);
+        sum=0;
+        mean=0;
+        t--;
+    }
+    return 0;
+
+}
