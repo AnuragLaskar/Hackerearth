@@ -1,0 +1,60 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[10];
+    int flag1=0,flag2=0,i,a,b,c;
+    scanf("%s",str);
+    for(i=0;i<8;i++)
+    {
+        if(i==0)
+        {
+            a=str[i]-'0';
+            b=str[i+1]-'0';
+            if((a+b)%2!=0)
+                {
+                    flag1=0;
+                    break;
+                }    
+            else 
+                flag1=1;
+        }
+        else if(i==3)
+        {
+            a=str[i]-'0';
+            b=str[i+1]-'0';
+            c=str[i+2]-'0';
+            if((((a+b)%2) != 0) || (((b+c)%2) != 0))
+                {
+                    flag1=0;
+                    break;
+                }    
+            else
+                flag1=1;
+        }
+        else if(i==7)
+        {
+            a=str[i]-'0';
+            b=str[i+1]-'0';
+            if(((a+b)%2) != 0)
+                {
+                    flag1=0;
+                    break;
+                }    
+            else
+                flag1=1;
+        }
+        else 
+            continue;
+            
+    }
+    if(str[2]=='A' || str[2]=='E' || str[2]=='I' || str[2]=='O' || str[2]=='U' || str[2]=='Y')
+        flag2=0;
+    else
+        flag2=1;
+    if(flag1==1 && flag2==1)
+        printf("\nvalid");
+    else
+        printf("\ninvalid");
+    return 0;
+}
