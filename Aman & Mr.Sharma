@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    long d,r,tt,td,x,count=0;
+    double cp;
+    scanf("%ld",&d);
+    while(d)
+    {
+        scanf("%ld %ld",&r,&x);
+        cp=(2*22*r)/7;
+        td=100*x;
+        if(cp<=(double)td)
+        {
+            count++;
+        }
+        d--;
+    }
+    printf("\n%d",count);
+    return 0;
+}
