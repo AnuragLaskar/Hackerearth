@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    long n,x,y;
+    scanf("\n%ld",&n);
+    scanf("\n%ld",&x);
+    while(n)
+    {
+        scanf("\n%ld",&y);
+        if(y>=x)
+            printf("\nYES");
+        else
+            printf("\nNO");
+        n--;    
+    }
+    return 0;
+}
