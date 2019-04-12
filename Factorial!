@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    int f,ans=1;
+    scanf("%d",&f);
+    while(f>1)
+    {
+        ans=f*ans;
+        f--;
+    }
+    printf("\n%d",ans);
+    return 0;
+}
