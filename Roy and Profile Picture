@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    int l,n,w,h;
+    scanf("%d\n",&l);
+    scanf("%d\n",&n);
+    while(n)
+    {
+        scanf("%d %d\n",&w,&h);
+        if(w<l || h<l)
+        {
+            printf("\nUPLOAD ANOTHER");
+        }
+        else if(w>=l && h>=l && w==h)
+        {
+            printf("\nACCEPTED");
+        }
+        else
+        {
+            printf("\nCROP IT");
+        }
+        n--;
+    }
+    return 0;
+}
