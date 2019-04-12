@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    int sum=0,i,len;
+    scanf("%s",str);
+    len=strlen(str);
+    for(i=0;i<len;i++)
+    {
+        sum=sum+(str[i]-96);
+    }
+    printf("\n%d",sum);
+    return 0;
+}
